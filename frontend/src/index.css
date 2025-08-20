@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Tanha;
+  src: url("../src/assets/fonts/Tanha-FD.ttf");
+}
+
+:root {
+  font-family: Tanha, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
