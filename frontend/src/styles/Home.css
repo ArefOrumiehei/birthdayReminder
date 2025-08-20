@@ -136,6 +136,31 @@
   background-color: #c0392b;
 }
 
+.sort-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.sort-buttons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #eee;
+  transition: 0.2s;
+}
+
+.sort-buttons button.active {
+  background: #d0c717;
+  color: white;
+}
+
+.sort-buttons button:hover {
+  background: #bbb;
+}
+
+
 @media (max-width: 650px) {
   .inputs, .btn, .btn-cancel {
     width: 100%;
