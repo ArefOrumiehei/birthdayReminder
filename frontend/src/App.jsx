@@ -18,7 +18,9 @@ function App() {
   return (
     <>
       <BackgroundCircles />
-      {userLogged ? <Home /> : <Register onLogin={() => setUserLogged(true)} />}
+      <div className="content">
+        {userLogged ? <Home /> : <Register onLogin={() => setUserLogged(true)} />}
+      </div>
     </>
   );
 }
