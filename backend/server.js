@@ -12,7 +12,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:5173/", "https://birthday-reminder-hazel.vercel.app/"],
+  origin: "*",
   credentials: true
 }));
 app.use(express.json());
