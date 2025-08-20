@@ -1,6 +1,7 @@
 .container {
   padding: 20px;
   margin: 0 24px;
+  max-width: 100%;
   background: #fbff004e;
   backdrop-filter: blur(15px);
   border-radius: 10px;
@@ -8,6 +9,7 @@
 
 .title {
   text-align: center;
+  font-size: 32px;
   color: #f39c12;
   margin-bottom: 20px;
 }
@@ -19,11 +21,19 @@
   flex-wrap: wrap;
 }
 
+.inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .input-field {
   flex: 1;
   padding: 8px 10px;
-  border-radius: 5px;
+  border-radius: 4px;
   border: 1px solid #ccc;
+  width: 100%;
+  min-width: 75px;
 }
 
 .btn {
@@ -125,4 +135,33 @@
 }
 .btn-cancel:hover {
   background-color: #c0392b;
+}
+
+@media (max-width: 650px) {
+  .inputs, .btn, .btn-cancel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    font-size: 24px;
+  }
+  
+  .person-age {
+    display: none;
+  }
+
+  .actions {
+    gap: 2px;
+  }
+}
+
+@media (max-width: 290px) {
+  .container {
+    margin: 0 12px;
+  }
+  .title {
+    font-size: 18px;
+  }
 }

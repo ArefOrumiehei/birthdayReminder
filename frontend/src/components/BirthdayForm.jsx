@@ -31,30 +31,34 @@ function BirthdayForm({ addOrEditPerson, editData, cancelEdit }) {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <input
-        className="input-field"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="نام"
-      />
-      <DatePicker
-        value={birthday}
-        onChange={setBirthday}
-        calendar={persian}
-        locale={persian_fa}
-        className="rmdp-mobile yellow bg-dark input-field"
-        format="YYYY/MM/DD"
-        placeholder="تاریخ تولد"
-        calendarPosition="bottom-right"
-        style={{
-          height: "40px",
-          fontSize: "16px",
-          padding: "0 10px",
-          borderRadius: "5px",
-          border: "1px solid #ccc",
-          boxSizing: "border-box"
-        }}
-      />
+      <div className="inputs">
+        <input
+          className="input-field"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="نام"
+        />
+        <DatePicker
+          value={birthday}
+          onChange={setBirthday}
+          calendar={persian}
+          locale={persian_fa}
+          className="rmdp-mobile yellow bg-dark"
+          format="YYYY/MM/DD"
+          placeholder="تاریخ تولد"
+          calendarPosition="bottom-right"
+          style={{
+            height: "39px",
+            width: "100%",
+            minWidth: "75px",
+            fontSize: "16px",
+            padding: "0 10px",
+            borderRadius: "4px",
+            border: "1px solid #ccc",
+            boxSizing: "border-box"
+          }}
+        />
+      </div>
       <button type="submit" className="btn">
         {editData ? 
           <span>
