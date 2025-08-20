@@ -64,7 +64,7 @@ function Home() {
 
   return (
     <div className="container">
-      <h1 className="title">🎂 یادآور تولد</h1>
+      <h1 className="title">کی کِی به دنیا اومده؟</h1>
       <BirthdayForm
         addOrEditPerson={addOrEditPerson}
         editData={editData}
