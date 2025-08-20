@@ -5,6 +5,7 @@ import persian_fa from "react-date-object/locales/persian_fa"
 import "react-multi-date-picker/styles/layouts/mobile.css"
 import "react-multi-date-picker/styles/colors/yellow.css"
 import "react-multi-date-picker/styles/backgrounds/bg-dark.css"
+import { IconPencil, IconPlus, IconX } from "@tabler/icons-react";
 
 function BirthdayForm({ addOrEditPerson, editData, cancelEdit }) {
   const [name, setName] = useState("");
@@ -55,11 +56,24 @@ function BirthdayForm({ addOrEditPerson, editData, cancelEdit }) {
         }}
       />
       <button type="submit" className="btn">
-        {editData ? "ویرایش" : "افزودن"}
+        {editData ? 
+          <span>
+            ویرایش
+            <IconPencil size={18} />
+          </span> 
+        :
+          <span>
+            افزودن
+            <IconPlus size={18} />
+          </span>
+        }
       </button>
       {editData && (
         <button type="button" className="btn-cancel" onClick={cancelEdit}>
-          ❌ لغو
+          <span>
+            لغو
+            <IconX size={18} />
+          </span>
         </button>
       )}
     </form>
